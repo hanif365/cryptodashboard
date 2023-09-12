@@ -11,7 +11,7 @@ const DashboardHeader = () => {
           <input
             type="text"
             placeholder="Search..."
-            className="bg-white  focus:outline-none focus:ring-2 focus:ring-blue-500 border border-[#C4CACD] rounded-3xl py-3 px-8 w-full pr-10"
+            className="bg-white  focus:outline-none focus:ring-2 focus:ring-[#f0f8ff] border border-[#C4CACD] rounded-3xl py-3 px-8 w-full pr-10"
           />
           <div className="absolute inset-y-0 right-0 flex items-center pr-8 pointer-events-none">
             <RiSearchLine className="w-6 h-6 text-[#C4CACD]" />
@@ -30,7 +30,7 @@ const DashboardHeader = () => {
               className="cursor-pointer"
             />
           </div>
-          <div className="flex justify-evenly self-center bg-[#f0f8ff] py-2 px-6 rounded-xl">
+          <div className="flex justify-evenly self-center bg-[#f0f8ff] py-2 px-10 rounded-xl">
             <Image
               src="/profile_photo.png"
               alt="markets icon"
