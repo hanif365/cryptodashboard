@@ -1,5 +1,6 @@
 "use client";
 
+import DashboardContentLayout from "@/components/DashboardComponent/DashboardContentLayout/DashboardContentLayout";
 import React from "react";
 
 const Dashboard = ({ params }) => {
@@ -8,12 +9,7 @@ const Dashboard = ({ params }) => {
   let content = null;
   switch (path) {
     case "/":
-      content = (
-        <>
-          <h1 className="text-2xl font-semibold">dashboard Page</h1>
-          <p>This is the content of dashboard page.</p>
-        </>
-      );
+      content = <DashboardContentLayout />
       break;
     case "markets":
       content = (
