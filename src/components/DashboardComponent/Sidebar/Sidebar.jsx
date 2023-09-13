@@ -90,7 +90,7 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
   return (
     <aside
       className={`min-h-screen border-r bg-white ease-linear duration-300 ${
-        isSidebarCollapsed ? "w-24" : "w-72"
+        isSidebarCollapsed ? "w-24" : "w-60"
       }`}
     >
       <div className="flex justify-end pt-3 px-3 space-x-3">
