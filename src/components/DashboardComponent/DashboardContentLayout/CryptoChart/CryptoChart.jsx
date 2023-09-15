@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactApexChart from "react-apexcharts";
 
-const CandlestickChart = () => {
+const CryptoChart = () => {
   const [timeFrame, setTimeFrame] = useState("1H");
   const [chartOptions, setChartOptions] = useState({});
   const [chartData, setChartData] = useState([]);
@@ -37,6 +37,11 @@ const CandlestickChart = () => {
       yaxis: {
         tooltip: {
           enabled: false,
+        },
+        labels: {
+          formatter: function (value) {
+            return "$ " + value;
+          },
         },
       },
       tooltip: {
@@ -281,7 +286,7 @@ const CandlestickChart = () => {
   };
 
   return (
-    <div className="w-2/3 py-6 mx-5">
+    <div className="w-2/3 bg-white py-6 px-5 rounded-xl">
       <div className="flex justify-between pb-5">
         <div className="w-64 2xl:w-80">
           <div className="flex justify-between bg-[#f7f4f483] px-5 py-6 rounded-2xl">
@@ -374,10 +379,10 @@ const CandlestickChart = () => {
         options={chartOptions}
         series={[{ data: chartData }]}
         type="candlestick"
-        height={350}
+        height={360}
       />
     </div>
   );
 };
 
-export default CandlestickChart;
+export default CryptoChart;
