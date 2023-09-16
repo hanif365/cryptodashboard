@@ -1,5 +1,3 @@
-// data/data.js
-
 export const marketData = [
   {
     category: "Defi",

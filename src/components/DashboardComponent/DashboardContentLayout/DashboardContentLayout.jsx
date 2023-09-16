@@ -3,6 +3,9 @@ import DashboardHeader from "./DashboardHeader/DashboardHeader";
 import CryptoStatus from "./CryptoStatus/CryptoStatus";
 import CryptoChart from "./CryptoChart/CryptoChart";
 import CryptoMarkets from "./CryptoMarkets/CryptoMarkets";
+import AssetsChart from "./AssetsChart/AssetsChart";
+import ConvertCurrency from "./ConvertCurrency/ConvertCurrency";
+import TransactionHistory from "./TransactionHistory/TransactionHistory";
 
 const DashboardContentLayout = () => {
   return (
@@ -12,6 +15,11 @@ const DashboardContentLayout = () => {
       <div className="flex m-5 space-x-2 ">
         <CryptoChart />
         <CryptoMarkets />
+      </div>
+      <div className="flex m-5 space-x-2">
+        <AssetsChart />
+        <ConvertCurrency />
+        <TransactionHistory />
       </div>
     </div>
   );

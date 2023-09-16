@@ -81,7 +81,9 @@ const CryptoMarkets = () => {
                 <td className="text-center text-sm font-semibold">
                   {item.name}
                 </td>
-                <td className="text-center text-sm">{item.currency}</td>
+                <td className="text-center font-semibold text-[#5E6E78] text-sm">
+                  {item.currency}
+                </td>
                 <td className="text-center text-sm font-semibold">
                   {item.value}
                 </td>
@@ -89,8 +91,8 @@ const CryptoMarkets = () => {
                   <p
                     className={
                       item?.percentage.includes("+")
-                        ? "text-green-600 bg-[#21965438] mx-2 rounded-xl"
-                        : "text-red-500 bg-[#ff1d1d38] mx-2 rounded-xl"
+                        ? "text-[#219653] bg-[#D3EADD] py-1 mx-2 rounded-xl"
+                        : "text-[#EB5757] bg-[#FBDDDD] py-1 mx-2 rounded-xl"
                     }
                   >
                     {item.percentage}
@@ -101,7 +103,7 @@ const CryptoMarkets = () => {
           </tbody>
         </table>
         <div className="flex justify-end">
-          <button className="border font-bold text-sm m-3 px-5 py-2 rounded-lg hover:bg-[#87b9ff4b] hover:text-blue-400 transition-all">
+          <button className="border text-[#999999] font-bold text-sm my-3 mx-5 px-5 py-2 rounded-lg hover:bg-[#87b9ff4b] hover:text-blue-400 transition-all">
             View All
           </button>
         </div>
