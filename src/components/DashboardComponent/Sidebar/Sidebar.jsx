@@ -17,69 +17,71 @@ import { FcHome } from "react-icons/fc";
 import { useTheme } from "next-themes";
 import { BsMoon, BsSun } from "react-icons/bs";
 
-const menuItems = [
-  {
-    id: "dashboard",
-    label: "Dashboard",
-    path: "/dashboard",
-    icon: <RiDashboardFill size={25} />,
-  },
-  {
-    id: "markets",
-    label: "Markets",
-    path: "/dashboard/markets",
-    icon: (
-      <Image
-        src="/markets_icon.png"
-        alt="markets icon"
-        width={65}
-        height={65}
-        className="w-full hover:text-red-500"
-      />
-    ),
-  },
-  {
-    id: "transactions",
-    label: "Transactions",
-    path: "/dashboard/transactions",
-    icon: <CgArrowsExchange size={25} />,
-  },
-  {
-    id: "profile",
-    label: "Profile",
-    path: "/dashboard/profile",
-    icon: <AiOutlineUser size={25} />,
-  },
-  {
-    id: "setting",
-    label: "Setting",
-    path: "/dashboard/setting",
-    icon: <RiSettings5Fill size={25} />,
-  },
-  {
-    id: "divider",
-    isDivider: true,
-  },
-  {
-    id: "help",
-    label: "Help",
-    path: "/dashboard/help",
-    icon: <BiHelpCircle size={25} />,
-  },
-  {
-    id: "logout",
-    label: "Log Out",
-    path: "/dashboard/logout",
-    icon: <MdLogout size={25} />,
-  },
-];
-
 const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
   const pathName = usePathname();
   const router = useRouter();
   const { theme, setTheme } = useTheme();
 
   console.log(theme);
+
+  const menuItems = [
+    {
+      id: "dashboard",
+      label: "Dashboard",
+      path: "/dashboard",
+      icon: <RiDashboardFill size={25} />,
+    },
+    {
+      id: "markets",
+      label: "Markets",
+      path: "/dashboard/markets",
+      icon: (
+        <Image
+          src={
+            theme === "dark" ? "/markets_icon_black.png" : "/markets_icon.png"
+          }
+          alt="markets icon"
+          width={65}
+          height={65}
+          className="w-full"
+        />
+      ),
+    },
+    {
+      id: "transactions",
+      label: "Transactions",
+      path: "/dashboard/transactions",
+      icon: <CgArrowsExchange size={25} />,
+    },
+    {
+      id: "profile",
+      label: "Profile",
+      path: "/dashboard/profile",
+      icon: <AiOutlineUser size={25} />,
+    },
+    {
+      id: "setting",
+      label: "Setting",
+      path: "/dashboard/setting",
+      icon: <RiSettings5Fill size={25} />,
+    },
+    {
+      id: "divider",
+      isDivider: true,
+    },
+    {
+      id: "help",
+      label: "Help",
+      path: "/dashboard/help",
+      icon: <BiHelpCircle size={25} />,
+    },
+    {
+      id: "logout",
+      label: "Log Out",
+      path: "/dashboard/logout",
+      icon: <MdLogout size={25} />,
+    },
+  ];
 
   const getLastWord = (path) => {
     const pathParts = path.split("/");
@@ -180,7 +182,8 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
                       <div
                         className={`${
                           isSidebarCollapsed
-                            ? "w-full flex justify-center items-center"
+                            ? // ? "w-full flex justify-center items-center"
+                              "mx-auto"
                             : ""
                         } `}
                       >
