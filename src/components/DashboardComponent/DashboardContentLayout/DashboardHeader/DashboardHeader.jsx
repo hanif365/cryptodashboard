@@ -21,7 +21,7 @@ const DashboardHeader = () => {
 
       <div className="self-center w-1/3 ">
         <div className="flex ">
-          <div className="self-center pr-10">
+          <div className="self-center pr-5">
             <Image
               src="/notification_photo.png"
               alt="notification icon"
@@ -30,7 +30,7 @@ const DashboardHeader = () => {
               className="cursor-pointer"
             />
           </div>
-          <div className="flex justify-evenly self-center bg-[#f0f8ff] py-2 px-10 rounded-xl">
+          <div className="flex justify-evenly self-center bg-[#f0f8ff] py-2 px-5 rounded-xl">
             <Image
               src="/profile_photo.png"
               alt="markets icon"
@@ -45,6 +45,9 @@ const DashboardHeader = () => {
             <div className="pl-10 self-center">
               <HiDotsVertical className="w-5 h-10 text-gray-500 cursor-pointer" />
             </div>
+          </div>
+          <div className="self-center pl-5">
+            <p>hello</p>
           </div>
         </div>
       </div>

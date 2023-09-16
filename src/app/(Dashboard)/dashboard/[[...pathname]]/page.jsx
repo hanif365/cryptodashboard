@@ -1,6 +1,13 @@
 "use client";
 
 import DashboardContentLayout from "@/components/DashboardComponent/DashboardContentLayout/DashboardContentLayout";
+import HelpContentLayout from "@/components/DashboardComponent/HelpContentLayout/HelpContentLayout";
+import LogoutContentLayout from "@/components/DashboardComponent/LogoutContentLayout/LogoutContentLayout";
+import MarketsContentLayout from "@/components/DashboardComponent/MarketsContentLayout/MarketsContentLayout";
+import NotfoundContentLayout from "@/components/DashboardComponent/NotfoundContentLayout/NotfoundContentLayout";
+import ProfileContentLayout from "@/components/DashboardComponent/ProfileContentLayout/ProfileContentLayout";
+import SettingContentLayout from "@/components/DashboardComponent/SettingContentLayout/SettingContentLayout";
+import TransactionContentLayout from "@/components/DashboardComponent/TransactionContentLayout/TransactionContentLayout";
 import React from "react";
 
 const Dashboard = ({ params }) => {
@@ -9,63 +16,28 @@ const Dashboard = ({ params }) => {
   let content = null;
   switch (path) {
     case "/":
-      content = <DashboardContentLayout />
+      content = <DashboardContentLayout />;
       break;
     case "markets":
-      content = (
-        <>
-          <h1 className="text-2xl font-semibold">markets Page</h1>
-          <p>This is the content of markets page.</p>
-        </>
-      );
+      content = <MarketsContentLayout />;
       break;
     case "transactions":
-      content = (
-        <>
-          <h1 className="text-2xl font-semibold">transactions Page</h1>
-          <p>This is the content of transactions page.</p>
-        </>
-      );
+      content = <TransactionContentLayout />;
       break;
     case "profile":
-      content = (
-        <>
-          <h1 className="text-2xl font-semibold">profile Page</h1>
-          <p>This is the content of profile page.</p>
-        </>
-      );
+      content = <ProfileContentLayout />;
       break;
     case "setting":
-      content = (
-        <>
-          <h1 className="text-2xl font-semibold">setting Page</h1>
-          <p>This is the content of setting page.</p>
-        </>
-      );
+      content = <SettingContentLayout />;
       break;
     case "help":
-      content = (
-        <>
-          <h1 className="text-2xl font-semibold">help Page</h1>
-          <p>This is the content of help page.</p>
-        </>
-      );
+      content = <HelpContentLayout />;
       break;
     case "logout":
-      content = (
-        <>
-          <h1 className="text-2xl font-semibold">logout Page</h1>
-          <p>This is the content of logout page.</p>
-        </>
-      );
+      content = <LogoutContentLayout />;
       break;
     default:
-      content = (
-        <>
-          <h1 className="text-2xl font-semibold">Dashboard Default page</h1>
-          <p>(when route is /dashboard/123)</p>
-        </>
-      );
+      content = <NotfoundContentLayout />;
   }
 
   return (
