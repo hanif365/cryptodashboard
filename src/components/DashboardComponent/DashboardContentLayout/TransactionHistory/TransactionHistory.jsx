@@ -12,7 +12,7 @@ const TransactionHistory = () => {
 
   return (
     <div className="w-5/12 px-1">
-      <div className="bg-white pt-5 rounded-xl">
+      <div className="bg-white py-5 rounded-xl">
         <div className="flex justify-between mx-5 mb-2">
           <h4 className="text-base lg:text-xl 2xl:text-2xl font-bold">
             History
@@ -28,7 +28,7 @@ const TransactionHistory = () => {
             {filteredData.map((item, index) => (
               <tr
                 key={index}
-                className={`h-14 hover:bg-gray-100 cursor-pointer ${
+                className={`h-16 hover:bg-gray-100 cursor-pointer ${
                   index !== filteredData.length - 1 ? "border-b" : ""
                 }`}
               >
