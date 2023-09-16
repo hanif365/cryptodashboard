@@ -14,6 +14,8 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { FcHome } from "react-icons/fc";
+import { useTheme } from "next-themes";
+import { BsMoon, BsSun } from "react-icons/bs";
 
 const menuItems = [
   {
@@ -75,6 +77,9 @@ const menuItems = [
 const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
   const pathName = usePathname();
   const router = useRouter();
+  const { theme, setTheme } = useTheme();
+
+  console.log(theme);
 
   const getLastWord = (path) => {
     const pathParts = path.split("/");
@@ -89,26 +94,46 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
 
   return (
     <aside
-      className={`min-h-screen border-r bg-white ease-linear duration-300 ${
+      className={`min-h-screen border-r ease-linear duration-300 dark:bg-[#1C1C25] dark:border-none bg-white ${
         isSidebarCollapsed ? "w-24" : "w-60"
       }`}
     >
-      <div className="flex justify-end pt-3 px-3 space-x-3">
+      <div className="flex justify-end pt-3 px-2 space-x-3">
         <Link href="/">
           <FcHome
             className="self-center"
             style={{ width: "20px", height: "20px" }}
           />
         </Link>
+
+        <div>
+          <button
+            className={`w-fit rounded-md hover:scale-110 active:scale-100 duration-200`}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          >
+            {theme === "light" ? (
+              <BsMoon
+                className="dark:text-white text-[#17286136]"
+                style={{ width: "20px", height: "20px" }}
+              />
+            ) : (
+              <BsSun
+                className="dark:text-white text-[#17286136]"
+                style={{ width: "20px", height: "20px" }}
+              />
+            )}
+          </button>
+        </div>
+
         <button onClick={toggleSidebar}>
           {isSidebarCollapsed ? (
             <PiArrowFatLinesRightFill
-              className="text-[#17286136]"
+              className="dark:text-white  text-[#17286136]"
               style={{ width: "20px", height: "20px" }}
             />
           ) : (
             <PiArrowFatLinesLeftFill
-              className="text-[#172861a6]"
+              className="dark:text-white  text-[#172861a6]"
               style={{ width: "20px", height: "20px" }}
             />
           )}
@@ -117,14 +142,19 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
 
       <div className="flex pb-7 px-6 pt-8">
         <Image
-          src={isSidebarCollapsed ? "/logo.png" : "/logo_full.png"}
+          src={
+            isSidebarCollapsed
+              ? "/logo.png"
+              : theme === "dark"
+              ? "/logo_full_dark.png"
+              : "/logo_full.png"
+          }
           alt="Profile Photo"
           width={1000}
           height={1000}
           className="w-full rounded-xl"
         />
       </div>
-      <hr />
 
       <div className="flex flex-col duration-300 ease-linear">
         <nav className="mt-3 py-4 px-4 lg:mt-5 lg:px-6">
@@ -133,7 +163,7 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
               {menuItems.map((menuItem) => (
                 <li key={menuItem.id}>
                   {menuItem.isDivider ? (
-                    <hr className="my-10 mx-5 border-t-2 border-gray-200" />
+                    <hr className="my-10 mx-5 border-t-2 dark:border-[#ffffff1a] border-gray-200" />
                   ) : (
                     <div
                       onClick={() => handlenavigate(menuItem)}
@@ -142,8 +172,8 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
                       }
                              ${
                                currentPath.includes(menuItem.id)
-                                 ? "bg-[#D5E6FB] text-[#0060FF]"
-                                 : "hover:bg-[#d5e6fb62] hover:text-[#0062ffb9] transition-all duration-200"
+                                 ? "dark:bg-[#062141] dark:text-[#0060FF] bg-[#D5E6FB] text-[#0060FF]"
+                                 : "dark:hover:bg-[#0621413a] dark:hover:text-[#0062ffb9] hover:bg-[#d5e6fb62] hover:text-[#0062ffb9] transition-all duration-200"
                              }
                             `}
                     >
