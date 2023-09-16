@@ -117,7 +117,7 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
 
       <div className="flex pb-7 px-6 pt-8">
         <Image
-          src="/logo.png"
+          src={isSidebarCollapsed ? "/logo.png" : "/logo_full.png"}
           alt="Profile Photo"
           width={1000}
           height={1000}
