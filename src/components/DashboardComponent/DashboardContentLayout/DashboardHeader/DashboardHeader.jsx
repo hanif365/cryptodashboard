@@ -6,7 +6,7 @@ import { RiSearchLine } from "react-icons/ri";
 
 const DashboardHeader = () => {
   return (
-    <div className={`p-6 flex justify-between dark:bg-[#1C1C25] bg-white`}>
+    <div className={`p-6 flex justify-between dark:bg-[#1C1C25] bg-white `}>
       <div className="w-1/2 self-center">
         <div className="relative">
           <input

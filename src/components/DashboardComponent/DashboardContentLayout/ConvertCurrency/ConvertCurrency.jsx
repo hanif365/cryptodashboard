@@ -57,11 +57,11 @@ const ConvertCurrency = () => {
   };
 
   return (
-    <div className="w-4/12 bg-white py-5 px-4 rounded-xl">
+    <div className="w-4/12 bg-white dark:bg-[#1C1C25] py-5 px-4 rounded-xl">
       <div className="flex justify-between mb-5">
         <h4 className="text-base lg:text-xl 2xl:text-2xl font-bold">Convert</h4>
 
-        <button className="border text-[#CCD0D7] font-bold px-3 py-1 rounded-lg hover:bg-[#87b9ff4b] hover:text-blue-400 transition-all">
+        <button className="border dark:border-[#ffffff0c] dark:text-[#999999] text-[#CCD0D7] font-bold px-3 py-1 rounded-lg hover:bg-[#87b9ff4b] hover:text-blue-400 transition-all">
           <PiDotsThreeOutlineFill
             className="self-center"
             style={{ width: "20px", height: "20px" }}
@@ -74,7 +74,7 @@ const ConvertCurrency = () => {
           type="number"
           value={usdtAmount}
           onChange={(e) => handleAmountChange(e, "USDT")}
-          className="w-full px-3 py-4 border rounded-md bg-[#F9F9FA] outline-none"
+          className="w-full px-3 py-4 border dark:border-[#ffffff0c] rounded-md bg-[#F9F9FA] dark:bg-[#121212] dark:text-[#626D7D] font-semibold outline-none"
         />
         <div className="absolute inset-y-0 right-2 flex items-center">
           <select
@@ -96,7 +96,7 @@ const ConvertCurrency = () => {
           type="number"
           value={btcAmount}
           onChange={(e) => handleAmountChange(e, "BTC")}
-          className="w-full px-3 py-4 border rounded-md bg-[#F9F9FA] outline-none"
+          className="w-full px-3 py-4 border dark:border-[#ffffff0c] rounded-md bg-[#F9F9FA] dark:bg-[#121212] dark:text-[#626D7D] font-semibold outline-none"
         />
         <div className="absolute inset-y-0 right-2 flex items-center">
           <select
@@ -115,7 +115,7 @@ const ConvertCurrency = () => {
 
       <button
         onClick={handleConvertClick}
-        className="px-4 py-4 w-full bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+        className="px-4 py-4 w-full font-bold bg-blue-500 text-white dark:text-black rounded-md hover:bg-blue-600 focus:outline-none"
       >
         Convert Now
       </button>

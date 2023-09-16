@@ -11,7 +11,7 @@ const CryptoMarkets = () => {
 
   return (
     <div className="w-1/3 px-1">
-      <div className="bg-white pt-5 rounded-xl">
+      <div className="bg-white dark:bg-[#1C1C25] pt-5 rounded-xl">
         <h4 className="text-base lg:text-xl 2xl:text-2xl font-bold pb-5 px-5">
           Markets
         </h4>
@@ -20,8 +20,8 @@ const CryptoMarkets = () => {
           <button
             className={`${
               selectedCategory === "All"
-                ? "bg-[#c0d9fd5e] text-[#3380FF]"
-                : "bg-[#F8F8F9]"
+                ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
+                : "bg-[#F8F8F9] dark:bg-[#1E2027]"
             } py-1 px-3 rounded-xl font-semibold text-xs`}
             onClick={() => setSelectedCategory("All")}
           >
@@ -30,8 +30,8 @@ const CryptoMarkets = () => {
           <button
             className={`${
               selectedCategory === "Metaverse"
-                ? "bg-[#c0d9fd5e] text-[#3380FF]"
-                : "bg-[#F8F8F9]"
+                ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
+                : "bg-[#F8F8F9] dark:bg-[#1E2027]"
             } py-1 px-3 rounded-xl font-semibold text-xs`}
             onClick={() => setSelectedCategory("Metaverse")}
           >
@@ -40,8 +40,8 @@ const CryptoMarkets = () => {
           <button
             className={`${
               selectedCategory === "Gaming"
-                ? "bg-[#c0d9fd5e] text-[#3380FF]"
-                : "bg-[#F8F8F9]"
+                ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
+                : "bg-[#F8F8F9] dark:bg-[#1E2027]"
             } py-1 px-3 rounded-xl font-semibold text-xs`}
             onClick={() => setSelectedCategory("Gaming")}
           >
@@ -50,8 +50,8 @@ const CryptoMarkets = () => {
           <button
             className={`${
               selectedCategory === "Defi"
-                ? "bg-[#c0d9fd5e] text-[#3380FF]"
-                : "bg-[#F8F8F9]"
+                ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
+                : "bg-[#F8F8F9] dark:bg-[#1E2027]"
             } py-1 px-3 rounded-xl font-semibold text-xs`}
             onClick={() => setSelectedCategory("Defi")}
           >
@@ -60,8 +60,8 @@ const CryptoMarkets = () => {
           <button
             className={`${
               selectedCategory === "NFT"
-                ? "bg-[#c0d9fd5e] text-[#3380FF]"
-                : "bg-[#F8F8F9]"
+                ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
+                : "bg-[#F8F8F9] dark:bg-[#1E2027]"
             } py-1 px-3 rounded-xl font-semibold text-xs`}
             onClick={() => setSelectedCategory("NFT")}
           >
@@ -74,8 +74,10 @@ const CryptoMarkets = () => {
             {filteredData.map((item, index) => (
               <tr
                 key={index}
-                className={`space-y-20 h-16 hover:bg-gray-100 cursor-pointer ${
-                  index !== filteredData.length - 1 ? "border-b" : ""
+                className={`space-y-20 h-16 hover:bg-gray-100 dark:hover:bg-[#14141d] cursor-pointer ${
+                  index !== filteredData.length - 1
+                    ? "border-b dark:border-b-[#ffffff0c]"
+                    : ""
                 }`}
               >
                 <td className="text-center text-sm font-semibold">
@@ -103,7 +105,7 @@ const CryptoMarkets = () => {
           </tbody>
         </table>
         <div className="flex justify-end">
-          <button className="border text-[#999999] font-bold text-sm my-3 mx-5 px-5 py-2 rounded-lg hover:bg-[#87b9ff4b] hover:text-blue-400 transition-all">
+          <button className="border dark:border-[#ffffff0c] text-[#999999] font-bold text-sm my-3 mx-5 px-5 py-2 rounded-lg hover:bg-[#87b9ff4b] hover:text-blue-400 transition-all">
             View All
           </button>
         </div>

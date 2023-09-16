@@ -58,7 +58,7 @@ const CryptoStatus = () => {
     <div className="m-5 flex space-x-3">
       {cryptoArray.map((crypto, index) => (
         <div className="flex-1" key={index}>
-          <div className="bg-white rounded-lg py-5 px-3 flex flex-col h-full group">
+          <div className="bg-white dark:bg-[#1C1C25] rounded-lg py-5 px-3 flex flex-col h-full group">
             <div className="flex space-x-3">
               <Image
                 src={crypto?.icon}
@@ -70,10 +70,12 @@ const CryptoStatus = () => {
               <div className="self-center">
                 <h5 className="text-sm font-bold">{crypto?.name}</h5>
                 {crypto.currency && (
-                  <p className="text-xs">{crypto?.currency}</p>
+                  <p className="text-xs text-[#626D7D]">{crypto?.currency}</p>
                 )}
               </div>
-              <div className="self-center">{crypto?.eyeIcon}</div>
+              <div className="self-center cursor-pointer">
+                {crypto?.eyeIcon}
+              </div>
             </div>
             <div className="flex-grow">
               <div className="flex justify-between">

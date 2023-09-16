@@ -32,11 +32,11 @@ const AssetsChart = () => {
   };
 
   return (
-    <div className="w-3/12 bg-white py-5 px-4 rounded-xl">
+    <div className="w-3/12 bg-white dark:bg-[#1C1C25] py-5 px-4 rounded-xl">
       <div className="flex justify-between mb-5">
         <h4 className="text-base lg:text-xl 2xl:text-2xl font-bold">Assets</h4>
 
-        <button className="border text-[#CCD0D7] font-bold px-3 py-1 rounded-lg hover:bg-[#87b9ff4b] hover:text-blue-400 transition-all">
+        <button className="border dark:border-[#ffffff0c] dark:text-[#999999] text-[#CCD0D7] font-bold px-3 py-1 rounded-lg hover:bg-[#87b9ff4b] hover:text-blue-400 transition-all">
           <PiDotsThreeOutlineFill
             className="self-center"
             style={{ width: "20px", height: "20px" }}

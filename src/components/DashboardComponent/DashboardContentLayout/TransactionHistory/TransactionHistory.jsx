@@ -12,13 +12,13 @@ const TransactionHistory = () => {
 
   return (
     <div className="w-5/12 px-1">
-      <div className="bg-white py-5 rounded-xl">
-        <div className="flex justify-between mx-5 mb-2">
+      <div className="bg-white dark:bg-[#1C1C25] pt-5 pb-9 rounded-xl">
+        <div className="flex justify-between mx-5 mb-3">
           <h4 className="text-base lg:text-xl 2xl:text-2xl font-bold">
             History
           </h4>
 
-          <button className="border text-[#999999] font-bold text-sm px-5 py-2 rounded-lg hover:bg-[#87b9ff4b] hover:text-blue-400 transition-all">
+          <button className="border dark:border-[#ffffff0c] text-[#999999] font-bold text-sm px-5 py-2 rounded-lg hover:bg-[#87b9ff4b] hover:text-blue-400 transition-all">
             View All
           </button>
         </div>
@@ -28,8 +28,10 @@ const TransactionHistory = () => {
             {filteredData.map((item, index) => (
               <tr
                 key={index}
-                className={`h-16 hover:bg-gray-100 cursor-pointer ${
-                  index !== filteredData.length - 1 ? "border-b" : ""
+                className={`h-16 hover:bg-gray-100 dark:hover:bg-[#14141d] cursor-pointer ${
+                  index !== filteredData.length - 1
+                    ? "border-b dark:border-b-[#ffffff0c]"
+                    : ""
                 }`}
               >
                 <td className="text-sm  px-3 font-semibold">

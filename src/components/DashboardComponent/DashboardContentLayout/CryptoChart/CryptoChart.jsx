@@ -16,15 +16,6 @@ const CryptoChart = () => {
         type: "candlestick",
         height: 350,
       },
-      title: {
-        // text: "BTCUSDT",
-        // align: "left",
-        // style: {
-        //   fontSize: "28px",
-        //   fontWeight: "bold",
-        //   // color:  'red',
-        // },
-      },
       xaxis: {
         type: "datetime",
         labels: {
@@ -51,7 +42,7 @@ const CryptoChart = () => {
           const open = candlestickData;
 
           const tooltipContent = `
-            <div class="custom-tooltip py-3 px-8">
+            <div class="custom-tooltip py-3 px-8 font-bold text-black bg-white dark:text-white dark:bg-black">
               <div>$ ${open}</div>
             </div>
           `;
@@ -286,21 +277,21 @@ const CryptoChart = () => {
   };
 
   return (
-    <div className="w-2/3 bg-white py-6 px-5 rounded-xl">
+    <div className="w-2/3 bg-white dark:bg-[#1C1C25] py-6 px-5 rounded-xl">
       <div className="flex justify-between pb-5">
         <div className="w-64 2xl:w-80">
-          <div className="flex justify-between bg-[#f7f4f483] px-5 py-6 rounded-2xl">
+          <div className="flex justify-between bg-[#f7f4f483] dark:bg-[#17171A] px-5 py-5 rounded-2xl">
             <div>
               <h4 className="text-base lg:text-xl 2xl:text-2xl font-bold">
                 BTCUSDT
               </h4>
-              <p className="text-sm py-1">Bitcoin</p>
+              <p className="text-sm py-1 mt-1 text-[#626D7D]">Bitcoin</p>
             </div>
             <div>
               <h5 className="text-sm lg:text-lg 2xl:text-xl font-bold">
                 $23,738
               </h5>
-              <p className="text-xs text-center bg-[#21965438] text-green-600 font-bold py-1 rounded-xl">
+              <p className="text-xs text-center bg-[#21965438] text-green-600 font-bold py-1 mt-1 rounded-xl">
                 +23.6%
               </p>
             </div>
@@ -310,7 +301,9 @@ const CryptoChart = () => {
         <div className="space-x-2">
           <button
             className={`${
-              timeFrame === "1H" ? "bg-[#c0d9fd5e]" : "bg-[#F8F8F9]"
+              timeFrame === "1H"
+                ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
+                : "bg-[#F8F8F9] dark:bg-[#1E2027]"
             } py-2 px-4 rounded-xl font-semibold text-sm`}
             onClick={() => {
               setTimeFrame("1H");
@@ -321,7 +314,9 @@ const CryptoChart = () => {
 
           <button
             className={`${
-              timeFrame === "3H" ? "bg-[#c0d9fd5e]" : "bg-[#F8F8F9]"
+              timeFrame === "3H"
+                ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
+                : "bg-[#F8F8F9] dark:bg-[#1E2027]"
             } py-2 px-4 rounded-xl font-semibold text-sm`}
             onClick={() => {
               setTimeFrame("3H");
@@ -332,7 +327,9 @@ const CryptoChart = () => {
 
           <button
             className={`${
-              timeFrame === "5H" ? "bg-[#c0d9fd5e]" : "bg-[#F8F8F9]"
+              timeFrame === "5H"
+                ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
+                : "bg-[#F8F8F9] dark:bg-[#1E2027]"
             } py-2 px-4 rounded-xl font-semibold text-sm`}
             onClick={() => {
               setTimeFrame("5H");
@@ -343,7 +340,9 @@ const CryptoChart = () => {
 
           <button
             className={`${
-              timeFrame === "1D" ? "bg-[#c0d9fd5e]" : "bg-[#F8F8F9]"
+              timeFrame === "1D"
+                ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
+                : "bg-[#F8F8F9] dark:bg-[#1E2027]"
             } py-2 px-4 rounded-xl font-semibold text-sm`}
             onClick={() => {
               setTimeFrame("1D");
@@ -354,7 +353,9 @@ const CryptoChart = () => {
 
           <button
             className={`${
-              timeFrame === "1W" ? "bg-[#c0d9fd5e]" : "bg-[#F8F8F9]"
+              timeFrame === "1W"
+                ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
+                : "bg-[#F8F8F9] dark:bg-[#1E2027]"
             } py-2 px-4 rounded-xl font-semibold text-sm`}
             onClick={() => {
               setTimeFrame("1W");
@@ -365,7 +366,9 @@ const CryptoChart = () => {
 
           <button
             className={`${
-              timeFrame === "1M" ? "bg-[#c0d9fd5e]" : "bg-[#F8F8F9]"
+              timeFrame === "1M"
+                ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
+                : "bg-[#F8F8F9] dark:bg-[#1E2027]"
             } py-2 px-4 rounded-xl font-semibold text-sm`}
             onClick={() => {
               setTimeFrame("1M");
@@ -375,6 +378,7 @@ const CryptoChart = () => {
           </button>
         </div>
       </div>
+
       <ReactApexChart
         options={chartOptions}
         series={[{ data: chartData }]}
