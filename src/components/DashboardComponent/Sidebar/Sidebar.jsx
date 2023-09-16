@@ -165,7 +165,11 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
               {menuItems.map((menuItem) => (
                 <li key={menuItem.id}>
                   {menuItem.isDivider ? (
-                    <hr className="my-10 mx-5 border-t-2 dark:border-[#ffffff1a] border-gray-200" />
+                    <hr
+                      className={`my-10 border-t-2 dark:border-[#ffffff1a] border-gray-200 ${
+                        isSidebarCollapsed ? "mx-0" : "mx-5"
+                      } `}
+                    />
                   ) : (
                     <div
                       onClick={() => handlenavigate(menuItem)}
