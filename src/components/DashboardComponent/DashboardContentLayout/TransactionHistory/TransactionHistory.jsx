@@ -11,7 +11,7 @@ const TransactionHistory = () => {
       : historyData.filter((item) => item.category === selectedCategory);
 
   return (
-    <div className="w-full lg:w-5/12 px-1">
+    <div className="w-full lg:w-5/12">
       <div className="bg-white dark:bg-[#1C1C25] pt-5 pb-9 rounded-xl">
         <div className="flex justify-between mx-5 mb-3">
           <h4 className="text-base lg:text-xl 2xl:text-2xl font-bold">

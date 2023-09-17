@@ -44,9 +44,9 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
             theme === "dark" ? "/markets_icon_black.png" : "/markets_icon.png"
           }
           alt="markets icon"
-          width={65}
-          height={65}
-          className="w-full"
+          width={100}
+          height={100}
+          className="w-[40px]"
         />
       ),
     },
@@ -145,7 +145,7 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
         </button>
       </div>
 
-      <div className="flex pb-7 px-6 pt-8">
+      <div className="flex pb-7 px-3 lg:px-6 pt-8">
         <Image
           src={
             isSidebarCollapsed

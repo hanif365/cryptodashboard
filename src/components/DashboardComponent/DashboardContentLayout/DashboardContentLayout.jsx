@@ -9,14 +9,14 @@ import TransactionHistory from "./TransactionHistory/TransactionHistory";
 
 const DashboardContentLayout = () => {
   return (
-    <div>
+    <div className="">
       <DashboardHeader />
       <CryptoStatus />
-      <div className="flex flex-col lg:flex-row m-5 space-y-2 lg:space-y-0 lg:space-x-4 ">
+      <div className="flex flex-col lg:flex-row mx-2 lg:mx-5 my-5 space-y-2 lg:space-y-0 lg:space-x-4 ">
         <CryptoChart />
         <CryptoMarkets />
       </div>
-      <div className="flex flex-col lg:flex-row m-5 space-y-2 lg:space-y-0 lg:space-x-2">
+      <div className="flex flex-col lg:flex-row mx-2 lg:mx-5 my-5 space-y-2 lg:space-y-0 lg:space-x-2">
         <AssetsChart />
         <ConvertCurrency />
         <TransactionHistory />

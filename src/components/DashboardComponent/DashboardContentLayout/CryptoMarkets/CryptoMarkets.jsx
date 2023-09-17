@@ -16,13 +16,13 @@ const CryptoMarkets = () => {
           Markets
         </h4>
 
-        <div className="flex justify-center space-x-1 pb-5">
+        <div className="flex justify-center space-x-1 pb-5 flex-wrap">
           <button
             className={`${
               selectedCategory === "All"
                 ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
                 : "bg-[#F8F8F9] dark:bg-[#1E2027]"
-            } py-1 px-3 rounded-xl font-semibold text-xs`}
+            } py-1 px-2 lg:px-3 rounded-xl font-semibold text-xs`}
             onClick={() => setSelectedCategory("All")}
           >
             All
@@ -32,7 +32,7 @@ const CryptoMarkets = () => {
               selectedCategory === "Metaverse"
                 ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
                 : "bg-[#F8F8F9] dark:bg-[#1E2027]"
-            } py-1 px-3 rounded-xl font-semibold text-xs`}
+            } py-1 px-2 lg:px-3 rounded-xl font-semibold text-xs`}
             onClick={() => setSelectedCategory("Metaverse")}
           >
             Metaverse
@@ -42,7 +42,7 @@ const CryptoMarkets = () => {
               selectedCategory === "Gaming"
                 ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
                 : "bg-[#F8F8F9] dark:bg-[#1E2027]"
-            } py-1 px-3 rounded-xl font-semibold text-xs`}
+            } py-1 px-2 lg:px-3 rounded-xl font-semibold text-xs`}
             onClick={() => setSelectedCategory("Gaming")}
           >
             Gaming
@@ -52,7 +52,7 @@ const CryptoMarkets = () => {
               selectedCategory === "Defi"
                 ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
                 : "bg-[#F8F8F9] dark:bg-[#1E2027]"
-            } py-1 px-3 rounded-xl font-semibold text-xs`}
+            } py-1 px-2 lg:px-3 rounded-xl font-semibold text-xs`}
             onClick={() => setSelectedCategory("Defi")}
           >
             Defi
@@ -62,14 +62,14 @@ const CryptoMarkets = () => {
               selectedCategory === "NFT"
                 ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
                 : "bg-[#F8F8F9] dark:bg-[#1E2027]"
-            } py-1 px-3 rounded-xl font-semibold text-xs`}
+            } py-1 px-2 lg:px-3 rounded-xl font-semibold text-xs`}
             onClick={() => setSelectedCategory("NFT")}
           >
             NFT
           </button>
         </div>
 
-        <table className="min-w-full">
+        <table className="w-full lg:min-w-full">
           <tbody>
             {filteredData.map((item, index) => (
               <tr

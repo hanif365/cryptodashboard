@@ -279,7 +279,7 @@ const CryptoChart = () => {
   return (
     <div className="w-full lg:w-2/3 bg-white dark:bg-[#1C1C25] py-6 px-5 rounded-xl">
       <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 justify-between pb-5">
-        <div className="w-64 2xl:w-80">
+        <div className="w-full lg:w-64 2xl:w-80">
           <div className="flex justify-between bg-[#f7f4f483] dark:bg-[#17171A] px-5 py-5 rounded-2xl">
             <div>
               <h4 className="text-sm lg:text-xl 2xl:text-2xl font-bold">
@@ -298,13 +298,13 @@ const CryptoChart = () => {
           </div>
         </div>
 
-        <div className="space-x-2">
+        <div className="space-x-1">
           <button
             className={`${
               timeFrame === "1H"
                 ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
                 : "bg-[#F8F8F9] dark:bg-[#1E2027]"
-            } py-2 px-4 rounded-xl font-semibold text-sm`}
+            } py-2 px-3 lg:px-4 rounded-xl font-semibold text-xs lg:text-sm `}
             onClick={() => {
               setTimeFrame("1H");
             }}
@@ -317,7 +317,7 @@ const CryptoChart = () => {
               timeFrame === "3H"
                 ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
                 : "bg-[#F8F8F9] dark:bg-[#1E2027]"
-            } py-2 px-4 rounded-xl font-semibold text-sm`}
+            } py-2 px-3 lg:px-4 rounded-xl font-semibold text-xs lg:text-sm `}
             onClick={() => {
               setTimeFrame("3H");
             }}
@@ -330,7 +330,7 @@ const CryptoChart = () => {
               timeFrame === "5H"
                 ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
                 : "bg-[#F8F8F9] dark:bg-[#1E2027]"
-            } py-2 px-4 rounded-xl font-semibold text-sm`}
+            } py-2 px-3 lg:px-4 rounded-xl font-semibold text-xs lg:text-sm `}
             onClick={() => {
               setTimeFrame("5H");
             }}
@@ -343,7 +343,7 @@ const CryptoChart = () => {
               timeFrame === "1D"
                 ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
                 : "bg-[#F8F8F9] dark:bg-[#1E2027]"
-            } py-2 px-4 rounded-xl font-semibold text-sm`}
+            } py-2 px-3 lg:px-4 rounded-xl font-semibold text-xs lg:text-sm `}
             onClick={() => {
               setTimeFrame("1D");
             }}
@@ -356,7 +356,7 @@ const CryptoChart = () => {
               timeFrame === "1W"
                 ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
                 : "bg-[#F8F8F9] dark:bg-[#1E2027]"
-            } py-2 px-4 rounded-xl font-semibold text-sm`}
+            } py-2 px-3 lg:px-4 rounded-xl font-semibold text-xs lg:text-sm `}
             onClick={() => {
               setTimeFrame("1W");
             }}
@@ -369,7 +369,7 @@ const CryptoChart = () => {
               timeFrame === "1M"
                 ? "bg-[#c0d9fd5e] dark:bg-[#131313] dark:text-[#1971FF]"
                 : "bg-[#F8F8F9] dark:bg-[#1E2027]"
-            } py-2 px-4 rounded-xl font-semibold text-sm`}
+            } py-2 px-3 lg:px-4 rounded-xl font-semibold text-xs lg:text-sm mt-3 lg:mt-0`}
             onClick={() => {
               setTimeFrame("1M");
             }}
