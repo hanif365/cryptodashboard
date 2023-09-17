@@ -55,7 +55,7 @@ const CryptoStatus = () => {
   ];
 
   return (
-    <div className="m-5 flex space-x-3">
+    <div className="m-5 space-y-5 md:flex md:space-x-3 md:space-y-0">
       {cryptoArray.map((crypto, index) => (
         <div className="flex-1" key={index}>
           <div className="bg-white dark:bg-[#1C1C25] rounded-lg py-5 px-3 flex flex-col h-full group">
