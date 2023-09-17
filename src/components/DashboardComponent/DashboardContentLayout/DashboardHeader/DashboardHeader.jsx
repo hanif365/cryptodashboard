@@ -12,25 +12,17 @@ const DashboardHeader = () => {
           <input
             type="text"
             placeholder="Search..."
-            className={`dark:bg-[#1C1C25] dark:border-[#ffffff1a] dark:focus:ring-[#f0f8ff13] bg-white border border-[#C4CACD] focus:ring-[#f0f8ff] focus:ring-2 focus:outline-none rounded-3xl py-3 px-8 w-full pr-10`}
+            className={`dark:bg-[#1C1C25] dark:border-[#ffffff1a] dark:focus:ring-[#f0f8ff13] bg-white border border-[#C4CACD] focus:ring-[#f0f8ff] focus:ring-2 focus:outline-none rounded-3xl py-3 px-8 lg:w-full pr-0 lg:pr-10`}
           />
-          <div className="absolute inset-y-0 right-0 flex items-center pr-8 pointer-events-none">
+          <div className="absolute inset-y-0 right-0 flex items-center pr-8 pointer-events-none invisible lg:visible">
             <RiSearchLine className="w-6 h-6 text-[#C4CACD]" />
           </div>
         </div>
       </div>
 
-      <div className="self-center w-1/3 ">
+      <div className="self-center w-1/3 hidden lg:block">
         <div className="flex ">
           <div className="self-center pr-10">
-            {/* <Image
-              src="/notification_photo.png"
-              alt="notification icon"
-              width={25}
-              height={25}
-              className="cursor-pointer"
-            /> */}
-
             <LuBellDot
               className={`w-6 h-6 dark:text-[#ffffff] text-[#0060FF] cursor-pointer `}
             />
