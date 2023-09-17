@@ -127,7 +127,7 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
           </button>
         </div>
 
-        <button onClick={toggleSidebar}>
+        <button onClick={toggleSidebar} className="hidden md:block">
           {isSidebarCollapsed ? (
             <PiArrowFatLinesRightFill
               className="dark:text-white  text-[#17286136]"

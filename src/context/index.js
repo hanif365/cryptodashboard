@@ -6,7 +6,8 @@ import { PropagateLoader } from "react-spinners";
 export const GlobalContext = createContext(null);
 
 export default function GlobalState({ children }) {
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const isMobileDevice = window.innerWidth < 768;
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(isMobileDevice);
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
