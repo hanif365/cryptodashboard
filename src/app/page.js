@@ -1,7 +1,11 @@
+import HomepageComponent from "@/components/HomepageComponent/HomepageComponent";
+import Navbar from "@/components/Shared/Navbar/Navbar";
+
 export default function Home() {
   return (
    <main>
-    <h1 className='text-red-400 '>Home Page</h1>
+    <Navbar />
+    <HomepageComponent />
    </main>
   )
 }
