@@ -277,18 +277,18 @@ const CryptoChart = () => {
   };
 
   return (
-    <div className="w-2/3 bg-white dark:bg-[#1C1C25] py-6 px-5 rounded-xl">
-      <div className="flex justify-between pb-5">
+    <div className="w-full lg:w-2/3 bg-white dark:bg-[#1C1C25] py-6 px-5 rounded-xl">
+      <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 justify-between pb-5">
         <div className="w-64 2xl:w-80">
           <div className="flex justify-between bg-[#f7f4f483] dark:bg-[#17171A] px-5 py-5 rounded-2xl">
             <div>
-              <h4 className="text-base lg:text-xl 2xl:text-2xl font-bold">
+              <h4 className="text-sm lg:text-xl 2xl:text-2xl font-bold">
                 BTCUSDT
               </h4>
-              <p className="text-sm py-1 mt-1 text-[#626D7D]">Bitcoin</p>
+              <p className="text-xs py-1 mt-1 text-[#626D7D]">Bitcoin</p>
             </div>
             <div>
-              <h5 className="text-sm lg:text-lg 2xl:text-xl font-bold">
+              <h5 className="text-xs lg:text-lg 2xl:text-xl font-bold">
                 $23,738
               </h5>
               <p className="text-xs text-center bg-[#21965438] text-green-600 font-bold py-1 mt-1 rounded-xl">

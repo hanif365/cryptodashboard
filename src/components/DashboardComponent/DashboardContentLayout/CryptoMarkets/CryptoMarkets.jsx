@@ -10,7 +10,7 @@ const CryptoMarkets = () => {
       : marketData.filter((item) => item.category === selectedCategory);
 
   return (
-    <div className="w-1/3 px-1">
+    <div className="w-full lg:w-1/3">
       <div className="bg-white dark:bg-[#1C1C25] pt-5 rounded-xl">
         <h4 className="text-base lg:text-xl 2xl:text-2xl font-bold pb-5 px-5">
           Markets
@@ -69,12 +69,12 @@ const CryptoMarkets = () => {
           </button>
         </div>
 
-        <table className="min-w-full ">
+        <table className="min-w-full">
           <tbody>
             {filteredData.map((item, index) => (
               <tr
                 key={index}
-                className={`space-y-20 h-16 hover:bg-gray-100 dark:hover:bg-[#14141d] cursor-pointer ${
+                className={`space-y-20 h-16 hover:bg-gray-100 dark:hover:bg-[#14141d] cursor-pointer  ${
                   index !== filteredData.length - 1
                     ? "border-b dark:border-b-[#ffffff0c]"
                     : ""

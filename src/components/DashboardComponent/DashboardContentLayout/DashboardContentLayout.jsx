@@ -12,15 +12,15 @@ const DashboardContentLayout = () => {
     <div>
       <DashboardHeader />
       <CryptoStatus />
-      <div className="flex m-5 space-x-2 ">
+      <div className="flex flex-col lg:flex-row m-5 space-y-2 lg:space-y-0 lg:space-x-4 ">
         <CryptoChart />
         <CryptoMarkets />
       </div>
-      <div className="flex m-5 space-x-2">
+      {/* <div className="flex m-5 space-x-2">
         <AssetsChart />
         <ConvertCurrency />
         <TransactionHistory />
-      </div>
+      </div> */}
     </div>
   );
 };
