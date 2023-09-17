@@ -97,7 +97,7 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
   return (
     <aside
       className={`min-h-screen border-r ease-linear duration-300 dark:bg-[#1C1C25] dark:border-none bg-white ${
-        isSidebarCollapsed ? "w-24" : "w-60"
+        isSidebarCollapsed ? "w-24" : "w-24 lg:w-60"
       }`}
     >
       <div className="flex justify-end pt-3 px-2 space-x-3">
@@ -154,7 +154,21 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
           alt="Profile Photo"
           width={1000}
           height={1000}
-          className="w-full rounded-xl"
+          className="w-full rounded-xl hidden md:block"
+        />
+
+        <Image
+          src={
+            isSidebarCollapsed
+              ? "/logo.png"
+              : theme === "dark"
+              ? "/logo.png"
+              : "/logo.png"
+          }
+          alt="Profile Photo"
+          width={1000}
+          height={1000}
+          className="w-full rounded-xl block md:hidden"
         />
       </div>
 
@@ -167,14 +181,14 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
                   {menuItem.isDivider ? (
                     <hr
                       className={`my-10 border-t-2 dark:border-[#ffffff1a] border-gray-200 ${
-                        isSidebarCollapsed ? "mx-0" : "mx-5"
+                        isSidebarCollapsed ? "mx-0" : "mx-0 lg:mx-5"
                       } `}
                     />
                   ) : (
                     <div
                       onClick={() => handlenavigate(menuItem)}
                       className={`group  cursor-pointer flex items-center gap-2.5 rounded-lg py-3 font-medium duration-300 ease-in-out ${
-                        isSidebarCollapsed ? "px-0" : "px-8"
+                        isSidebarCollapsed ? "px-0" : "px-0 lg:px-8"
                       }
                              ${
                                currentPath.includes(menuItem.id)
@@ -188,14 +202,14 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
                           isSidebarCollapsed
                             ? // ? "w-full flex justify-center items-center"
                               "mx-auto"
-                            : ""
+                            : "mx-auto lg:mx-0"
                         } `}
                       >
                         {menuItem.icon}
                       </div>
                       <p
                         className={`${
-                          isSidebarCollapsed ? "hidden" : ""
+                          isSidebarCollapsed ? "hidden" : "hidden lg:block"
                         } font-bold`}
                       >
                         {menuItem.label}
