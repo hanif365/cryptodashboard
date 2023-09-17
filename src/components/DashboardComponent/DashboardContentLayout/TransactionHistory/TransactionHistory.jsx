@@ -11,7 +11,7 @@ const TransactionHistory = () => {
       : historyData.filter((item) => item.category === selectedCategory);
 
   return (
-    <div className="w-5/12 px-1">
+    <div className="w-full lg:w-5/12 px-1">
       <div className="bg-white dark:bg-[#1C1C25] pt-5 pb-9 rounded-xl">
         <div className="flex justify-between mx-5 mb-3">
           <h4 className="text-base lg:text-xl 2xl:text-2xl font-bold">
@@ -47,26 +47,28 @@ const TransactionHistory = () => {
                     />
                   )}
                 </td>
-                <td className="text-sm font-semibold">{item.name}</td>
+                <td className="text-xs lg:text-sm font-semibold">
+                  {item.name}
+                </td>
                 {/* <td className="text-center text-sm">{item.value}</td> */}
                 <td
                   className={
                     item?.value.includes("+")
-                      ? "text-[#219653] font-semibold text-center"
-                      : "text-[#EB5757] font-semibold text-center"
+                      ? "text-[#219653] font-semibold text-center text-xs lg:text-sm"
+                      : "text-[#EB5757] font-semibold text-center text-xs lg:text-sm"
                   }
                 >
                   {item.value}
                 </td>
-                <td className="text-center text-sm font-semibold">
+                <td className="text-center text-xs lg:text-sm font-semibold">
                   {item.time}
                 </td>
-                <td className="text-center text-sm font-semibold">
+                <td className="text-center text-xs lg:text-sm font-semibold">
                   <p
                     className={
                       item?.status == "done"
-                        ? "text-[#219653] bg-[#D3EADD] py-1 mx-2 rounded-xl"
-                        : "text-[#F2994A] bg-[#FCF4DB] py-1 mx-2 rounded-xl"
+                        ? "text-[#219653] bg-[#D3EADD] px-1 lg:px-0 py-1 mx-2 rounded-xl"
+                        : "text-[#F2994A] bg-[#FCF4DB] px-1 lg:px-0 py-1 mx-2 rounded-xl"
                     }
                   >
                     {item.status}
@@ -76,11 +78,6 @@ const TransactionHistory = () => {
             ))}
           </tbody>
         </table>
-        {/* <div className="flex justify-end">
-          <button className="border font-bold text-sm m-3 px-5 py-2 rounded-lg hover:bg-[#87b9ff4b] hover:text-blue-400 transition-all">
-            View All
-          </button>
-        </div> */}
       </div>
     </div>
   );

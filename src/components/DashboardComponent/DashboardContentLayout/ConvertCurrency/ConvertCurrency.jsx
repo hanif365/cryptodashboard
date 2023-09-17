@@ -57,7 +57,7 @@ const ConvertCurrency = () => {
   };
 
   return (
-    <div className="w-4/12 bg-white dark:bg-[#1C1C25] py-5 px-4 rounded-xl">
+    <div className="w-full lg:w-4/12 bg-white dark:bg-[#1C1C25] py-5 px-4 rounded-xl">
       <div className="flex justify-between mb-5">
         <h4 className="text-base lg:text-xl 2xl:text-2xl font-bold">Convert</h4>
 

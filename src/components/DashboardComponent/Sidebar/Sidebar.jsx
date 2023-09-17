@@ -21,8 +21,11 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
   const pathName = usePathname();
   const router = useRouter();
   const { theme, setTheme } = useTheme();
-
   console.log(theme);
+
+  const handleLogoClick = () => {
+    router.push("/");
+  };
 
   const menuItems = [
     {
@@ -154,7 +157,8 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
           alt="Profile Photo"
           width={1000}
           height={1000}
-          className="w-full rounded-xl hidden md:block"
+          className="w-full rounded-xl hidden md:block cursor-pointer"
+          onClick={handleLogoClick}
         />
 
         <Image
@@ -168,7 +172,8 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
           alt="Profile Photo"
           width={1000}
           height={1000}
-          className="w-full rounded-xl block md:hidden"
+          className="w-full rounded-xl block md:hidden cursor-pointer"
+          onClick={handleLogoClick}
         />
       </div>
 
