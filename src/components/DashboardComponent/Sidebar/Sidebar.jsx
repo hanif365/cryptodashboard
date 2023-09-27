@@ -6,6 +6,7 @@ import { CgArrowsExchange } from "react-icons/cg";
 import { AiOutlineUser } from "react-icons/ai";
 import { BiHelpCircle } from "react-icons/bi";
 import { MdLogout } from "react-icons/md";
+import { SiMarketo } from "react-icons/si";
 import {
   PiArrowFatLinesLeftFill,
   PiArrowFatLinesRightFill,
@@ -41,17 +42,7 @@ const Sidebar = () => {
       id: "markets",
       label: "Markets",
       path: "/dashboard/markets",
-      icon: (
-        <Image
-          src={
-            theme === "dark" ? "/markets_icon_black.png" : "/markets_icon.png"
-          }
-          alt="markets icon"
-          width={100}
-          height={100}
-          className="w-[40px]"
-        />
-      ),
+      icon: <SiMarketo size={25} />,
     },
     {
       id: "transactions",
