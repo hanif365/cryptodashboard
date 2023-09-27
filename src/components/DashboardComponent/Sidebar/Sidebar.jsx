@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useContext } from "react";
 import { RiDashboardFill, RiSettings5Fill } from "react-icons/ri";
 import { CgArrowsExchange } from "react-icons/cg";
 import { AiOutlineUser } from "react-icons/ai";
@@ -16,8 +16,11 @@ import Image from "next/image";
 import { FcHome } from "react-icons/fc";
 import { useTheme } from "next-themes";
 import { BsMoon, BsSun } from "react-icons/bs";
+import { GlobalContext } from "@/context";
 
-const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
+const Sidebar = () => {
+  const { isSidebarCollapsed, setIsSidebarCollapsed, toggleSidebar } =
+    useContext(GlobalContext);
   const pathName = usePathname();
   const router = useRouter();
   const { theme, setTheme } = useTheme();
@@ -99,7 +102,7 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
 
   return (
     <aside
-      className={`min-h-screen border-r ease-linear duration-300 dark:bg-[#1C1C25] dark:border-none bg-white ${
+      className={`min-h-screen border-r dark:bg-[#1C1C25] dark:border-none bg-white ${
         isSidebarCollapsed ? "w-24" : "w-24 lg:w-60"
       }`}
     >
@@ -113,7 +116,7 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
 
         <div>
           <button
-            className={`w-fit rounded-md hover:scale-110 active:scale-100 duration-200`}
+            className={`w-fit rounded-md hover:scale-110 active:scale-100`}
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             {theme === "light" ? (
@@ -177,7 +180,7 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
         />
       </div>
 
-      <div className="flex flex-col duration-300 ease-linear">
+      <div className="flex flex-col">
         <nav className="mt-3 py-4 px-4 lg:mt-5 lg:px-6">
           <div>
             <ul className="mb-6 flex flex-col gap-1.5">
@@ -192,13 +195,13 @@ const Sidebar = ({ isSidebarCollapsed, toggleSidebar }) => {
                   ) : (
                     <div
                       onClick={() => handlenavigate(menuItem)}
-                      className={`group  cursor-pointer flex items-center gap-2.5 rounded-lg py-3 font-medium duration-300 ease-in-out ${
+                      className={`group  cursor-pointer flex items-center gap-2.5 rounded-lg py-3 font-medium ${
                         isSidebarCollapsed ? "px-0" : "px-0 lg:px-8"
                       }
                              ${
                                currentPath.includes(menuItem.id)
                                  ? "dark:bg-[#062141] dark:text-[#0060FF] bg-[#D5E6FB] text-[#0060FF]"
-                                 : "dark:hover:bg-[#0621413a] dark:hover:text-[#0062ffb9] hover:bg-[#d5e6fb62] hover:text-[#0062ffb9] transition-all duration-200"
+                                 : "dark:hover:bg-[#0621413a] dark:hover:text-[#0062ffb9] hover:bg-[#d5e6fb62] hover:text-[#0062ffb9]"
                              }
                             `}
                     >

@@ -1,7 +1,7 @@
 import GlobalState from "@/context";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Providers from "@/context/ThemeProvider";
+import MyThemeProviders from "@/utils/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <GlobalState>
-          <Providers>{children}</Providers>
+          <MyThemeProviders>{children}</MyThemeProviders>
         </GlobalState>
       </body>
     </html>
