@@ -15,7 +15,10 @@ export default function DashboardLayout({ children }) {
       <Sidebar />
 
       {/* Dashboard main content */}
-      <main className="flex-1">{children}</main>
+      <main className="flex-1">
+        {children}
+        <p className="text-center py-3">&copy; 2023 All Rights Reserved. Build By <a href="https://hanif.netlify.app/" target="_blank" className="text-orange-600 font-bold">M.A.Hanif</a></p>
+      </main>
     </div>
   );
 }
